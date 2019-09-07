@@ -1,0 +1,20 @@
+﻿  Engine.cpp
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Engine\Engine.h(8,16): error C2146:  syntax error: missing ';' before identifier 'std'
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Engine\Engine.h(22,21): error C2143:  syntax error: missing ';' before '*'
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Engine\Engine.h(22,21): error C4430:  missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Engine\Engine.h(22,29): error C2238:  unexpected token(s) preceding ';'
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Engine\Engine.cpp(5,11): error C2143:  syntax error: missing ';' before '*'
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Engine\Engine.cpp(5,11): error C4430:  missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Engine\Engine.cpp(5,21): error C2039:  'window': is not a member of 'Engine'
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Engine\Engine.h(10): message :  see declaration of 'Engine'
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Engine\Engine.cpp(5,30): error C4430:  missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Engine\Engine.cpp(16,3): error C2065:  'cout': undeclared identifier
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Engine\Engine.cpp(16,41): error C2065:  'endl': undeclared identifier
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Engine\Engine.cpp(20,83): error C2440:  '=': cannot convert from 'GLFWwindow *' to 'int *'
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Engine\Engine.cpp(20,29): message :  Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Engine\Engine.cpp(23,3): error C2065:  'cout': undeclared identifier
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Engine\Engine.cpp(23,38): error C2065:  'endl': undeclared identifier
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Engine\Engine.cpp(28,33): error C2664:  'void glfwMakeContextCurrent(GLFWwindow *)': cannot convert argument 1 from 'int *' to 'GLFWwindow *'
+  twitch.cpp
+  Generating Code...
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Engine\Engine.cpp(28,27): message :  Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
