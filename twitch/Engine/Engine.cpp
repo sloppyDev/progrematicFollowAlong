@@ -48,5 +48,32 @@ bool Engine::Initialize(char* windowTitle)
    glViewport(0, 0, width, height);
    glMatrixMode(GL_PROJECTION);
    glLoadIdentity();
+   glOrtho(0, width, 0, height, -10, 10);
+   glDepthRange(-10, 10);
+   glMatrixMode(GL_MODELVIEW);
 
+   //Alpha Blending
+   glEnable(GL_ALPHA_TEST);
+   glEnable(GL_BLEND);
+   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+   return true;
+}
+
+void Engine::Update()
+{
+   glfwPollEvents();
+}
+
+void Engine::BeginRender()
+{
+   // Clearing out back buffer
+   glClearColor(0, 1, 0, 1);
+   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+}
+
+void Engine::EndRender()
+{
+   // Swapping buffers
+   glfwSwapBuffers(window);
 }

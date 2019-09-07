@@ -124,13 +124,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Engine\Engine.cpp" />
+    <ClCompile Include="Engine\Graphics\Sprite.cpp" />
+    <ClCompile Include="Engine\Graphics\Texture.cpp" />
     <ClCompile Include="twitch.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Engine.h" />
+    <ClInclude Include="Engine\Graphics\Sprite.h" />
+    <ClInclude Include="Engine\Graphics\Texture.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Engine\Graphics\SOIL\lib\SOIL.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Art\Biplane.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
