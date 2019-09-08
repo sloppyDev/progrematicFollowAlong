@@ -13,6 +13,8 @@ public:
    static int SCREEN_WIDTH;
    static int SCREEN_HEIGHT;
 
+   static float GetDt();
+
    Engine();
    ~Engine();
 
@@ -24,6 +26,10 @@ public:
    
 private:
    static GLFWwindow* window;
+
+   static float dt;
+   float lastTime;
+
 };
 
 #endif

@@ -6,6 +6,7 @@
 
 #include <iostream>;
 #include <string>;
+
 using namespace std;
 
 class Sprite
@@ -19,10 +20,31 @@ public:
    void Update();
    void Render();
 
+   void MoveTo(float x, float y);
+   void MoveBy(float x, float y);
+
+   void MoveLeft();
+   void MoveRight();
+   void MoveUp();
+   void MoveDown();
+
+   void SpeedTo(float s);
+   void SpeedBy(float s);
+
+   void RotateTo(float _rot);
+   void RotateBy(float _rot);
+
+   void SetScale(float x);
+   void SetScale(float x, float y);
+
 private:
    Texture texture;
    float xPos{};
    float yPos{};
+   float rot{};
+   float xScale{};
+   float yScale{};
+   float speed{};
 
 };
 

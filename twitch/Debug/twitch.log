@@ -1,4 +1,2 @@
-﻿  twitch.cpp
-C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Engine\Graphics\Sprite.h(7,10): warning C4067:  unexpected tokens following preprocessor directive - expected a newline
-C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Engine\Graphics\Sprite.h(8,10): warning C4067:  unexpected tokens following preprocessor directive - expected a newline
+﻿  Engine.cpp
   twitch.vcxproj -> C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Debug\twitch.exe
