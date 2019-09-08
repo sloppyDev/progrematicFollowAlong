@@ -14,7 +14,7 @@ int main()
    char windowName[] = "Twitch!";
    engine.Initialize(windowName);
 
-   Sprite testSprite = Sprite("Assets/Art/Biplane.png", -100, -100);
+   Sprite testSprite = Sprite("Assets/Art/Biplane.png", Vector3(-100, -100, 0));
    testSprite.SetScale(0.25);
 
    while (true)

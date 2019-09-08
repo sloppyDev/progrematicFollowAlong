@@ -3,9 +3,10 @@
 
 #include "GLFW/glfw3.h"
 #include "Texture.h"
+#include "../Math/Vector3.h"
 
-#include <iostream>;
-#include <string>;
+#include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -14,14 +15,14 @@ class Sprite
 public:
    Sprite();
    Sprite(string imagePath);
-   Sprite(string imagePath, float _xPos, float _yPos);
+   Sprite(string imagePath, Vector3 _pos);
    ~Sprite();
 
    void Update();
    void Render();
 
-   void MoveTo(float x, float y);
-   void MoveBy(float x, float y);
+   void MoveTo(Vector3 vec);
+   void MoveBy(Vector3 vec);
 
    void MoveLeft();
    void MoveRight();
@@ -35,16 +36,17 @@ public:
    void RotateBy(float _rot);
 
    void SetScale(float x);
-   void SetScale(float x, float y);
+   void SetScale(Vector3 vec);
 
 private:
    Texture texture;
-   float xPos{};
-   float yPos{};
-   float rot{};
-   float xScale{};
-   float yScale{};
+
+   Vector3 pos;
    float speed{};
+   float rot{};
+   Vector3 scale;
+
+
 
 };
 
