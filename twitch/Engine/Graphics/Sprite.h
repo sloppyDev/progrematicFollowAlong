@@ -38,6 +38,11 @@ public:
    void SetScale(float x);
    void SetScale(Vector3 vec);
 
+   Vector3* GetPos();
+   float* GetRot();
+   Vector3* GetScale();
+   Vector3* GetSize();
+
 private:
    Texture texture;
 
@@ -45,9 +50,7 @@ private:
    float speed{};
    float rot{};
    Vector3 scale;
-
-
-
+   Vector3 size;
 };
 
 #endif

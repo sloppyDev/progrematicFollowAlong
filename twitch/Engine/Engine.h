@@ -29,7 +29,6 @@ private:
 
    static float dt;
    float lastTime;
-
 };
 
 #endif

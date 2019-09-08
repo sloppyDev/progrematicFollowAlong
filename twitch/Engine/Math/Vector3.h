@@ -1,5 +1,5 @@
-#ifndef VECTOR3
-#define VECTOR3
+#ifndef TWITCH_VECTOR3
+#define TWITCH_VECTOR3
 
 class Vector3
 {
