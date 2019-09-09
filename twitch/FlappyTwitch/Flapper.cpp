@@ -19,7 +19,7 @@ Flapper::Flapper(Sprite _sprite) : Flapper()
    sprite = _sprite;
 
    Rectangle boundingRect = Rectangle();
-   Vector3 sizeScale(0.8, 0.6, 1);
+   Vector3 sizeScale(0.8f, 0.6f, 1);
    boundingRect.SetSize(*sprite.GetSize() * *sprite.GetScale() * sizeScale);
 
    rb.Initialize(0.90f, -1.0f, sprite.GetPos(), sprite.GetRot(), sprite.GetScale(), sprite.GetSize(), boundingRect);

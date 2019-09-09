@@ -124,7 +124,7 @@ bool RigidBody::IsColliding(const RigidBody& rbA, const RigidBody& rbB)
    axes.push_back(axis4);
    axes.push_back(axis1);
 
-   for (int i = 0; i < axes.size(); i++)
+   for (unsigned int i{ 0 }; i < axes.size(); i++)
    {
       Vector3 aUpRightProj  = Vector3::Project(aUR, axes[i]);
       Vector3 aUpLeftProj   = Vector3::Project(aUL, axes[i]);

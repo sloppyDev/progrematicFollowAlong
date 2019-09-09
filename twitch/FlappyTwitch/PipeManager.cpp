@@ -76,9 +76,9 @@ bool PipeManager::CheckCollision(Flapper& flapper)
 
 void PipeManager::CreatePipe()
 {
-   float spawnY = rand() % (maxYSpawn - minYSpawn) + minYSpawn;
-   Pipe* pipe = new Pipe(Vector3(Engine::SCREEN_WIDTH, spawnY, 0));
-   pipe->SetGap(pipeYGap);
+   int spawnY = rand() % (maxYSpawn - minYSpawn) + minYSpawn;
+   Pipe* pipe = new Pipe(Vector3((float)Engine::SCREEN_WIDTH, (float)spawnY, 0));
+   pipe->SetGap((float)pipeYGap);
 
    pipes.push_back(pipe);
    totalPipes++;

@@ -15,7 +15,7 @@ using namespace std;
 int main()
 {
    std::cout << "Hello, twitch!" << std::endl;
-   srand(time(NULL));
+   srand((unsigned int)time(NULL));
    
    Engine engine;
    char windowName[] = "Twitch!";

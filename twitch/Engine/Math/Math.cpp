@@ -36,7 +36,7 @@ float Math::Min(vector<float> x)
 {
    float retVal{ x[0] };
 
-   for (int i = 1; i < x.size(); i++)
+   for (unsigned int i = 1; i < x.size(); i++)
    {
       if (x[i] < retVal)
       {
@@ -50,7 +50,7 @@ float Math::Max(vector<float> x)
 {
    float retVal{ x[0] };
 
-   for (int i = 1; i < x.size(); i++)
+   for (unsigned int i = 1; i < x.size(); i++)
    {
       if (x[i] > retVal)
       {
