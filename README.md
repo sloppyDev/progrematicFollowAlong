@@ -10,5 +10,5 @@ This game requires the installation of the OpenGL library Graphics Library Frame
 
 Download links to both libraries are given below.
 
-*[GLFW Download](https://www.glfw.org/download.html)
-*[SOIL Download](https://www.lonesock.net/soil.html)
+* [GLFW Download](https://www.glfw.org/download.html)
+* [SOIL Download](https://www.lonesock.net/soil.html)
