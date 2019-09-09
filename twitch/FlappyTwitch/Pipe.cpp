@@ -22,7 +22,7 @@ Pipe::Pipe()
    botSprite = Sprite(*pipeSprite);
 
    gap = 350;
-   speed = 10;
+   speed = 200;
 }
 
 Pipe::Pipe(Vector3 _pos) : Pipe()
@@ -32,29 +32,25 @@ Pipe::Pipe(Vector3 _pos) : Pipe()
       return;
    }
 
-   pos = _pos;
+   pos = _pos + Vector3(GetWidth()/2, 0, 0);
 
    UpdatePos();
-
-   // Top Pipe
-   Vector3 topPos = pos;
-
-   topSprite.MoveTo(topPos);
    topSprite.FlipVertical();
-
+   // Top Pipe
    Rectangle topRect = Rectangle();
    topRect.SetSize(Vector3(Math::Abs(topSprite.GetSize()->x * topSprite.GetScale()->x), Math::Abs(topSprite.GetSize()->y * topSprite.GetScale()->y), 1));
    topRb = RigidBody();
-   topRb.Initialize(0, 0, topSprite.GetPos(), topSprite.GetRot(), topSprite.GetScale(), topSprite.GetSize(), topRect);
+   topRb.Initialize(1, 0, topSprite.GetPos(), topSprite.GetRot(), topSprite.GetScale(), topSprite.GetSize(), topRect);
 
    // Bottom Pipe
-   Vector3 botPos = pos;
-   botSprite.MoveTo(botPos);
-
    Rectangle botRect = Rectangle();
    botRect.SetSize(Vector3(Math::Abs(botSprite.GetSize()->x * botSprite.GetScale()->x), Math::Abs(botSprite.GetSize()->y * botSprite.GetScale()->y), 1));
    botRb = RigidBody();
-   botRb.Initialize(0, 0, botSprite.GetPos(), botSprite.GetRot(), botSprite.GetScale(), botSprite.GetSize(), botRect);
+   botRb.Initialize(1, 0, botSprite.GetPos(), botSprite.GetRot(), botSprite.GetScale(), botSprite.GetSize(), botRect);
+
+   // Add Force
+   topRb.AddForce(Vector3(-speed, 0, 0));
+   botRb.AddForce(Vector3(-speed, 0, 0));
 }
 
 Pipe::~Pipe()
@@ -62,10 +58,14 @@ Pipe::~Pipe()
 
 }
 
+void Pipe::SetGap(float _gap)
+{
+   gap = _gap;
+   UpdatePos();
+}
+
 void Pipe::Update()
 {
-   topSprite.MoveBy(Vector3(-speed * Engine::GetDt(), 0, 0));
-   botSprite.MoveBy(Vector3(-speed * Engine::GetDt(), 0, 0));
    topRb.Update();
    botRb.Update();
 }
@@ -98,6 +98,16 @@ RigidBody Pipe::GetTopRb()
 RigidBody Pipe::GetBotRb()
 {
    return botRb;
+}
+
+float Pipe::GetX()
+{
+   return topSprite.GetPos()->x;
+}
+
+float Pipe::GetWidth()
+{
+   return topSprite.GetSize()->x * topSprite.GetScale()->x;
 }
 
 void Pipe::UpdatePos()

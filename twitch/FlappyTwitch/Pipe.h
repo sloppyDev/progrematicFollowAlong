@@ -15,6 +15,8 @@ public:
    Pipe(Vector3 _pos);
    ~Pipe();
 
+   void SetGap(float _gap);
+
    void Update();
    void Render();
 
@@ -23,6 +25,9 @@ public:
 
    RigidBody GetTopRb();
    RigidBody GetBotRb();
+
+   float GetX();
+   float GetWidth();
 
 private:
    void UpdatePos();

@@ -135,6 +135,7 @@
     <ClCompile Include="FlappyTwitch\Flapper.cpp" />
     <ClCompile Include="FlappyTwitch\InputManager.cpp" />
     <ClCompile Include="FlappyTwitch\Pipe.cpp" />
+    <ClCompile Include="FlappyTwitch\PipeManager.cpp" />
     <ClCompile Include="twitch.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +151,7 @@
     <ClInclude Include="FlappyTwitch\Flapper.h" />
     <ClInclude Include="FlappyTwitch\InputManager.h" />
     <ClInclude Include="FlappyTwitch\Pipe.h" />
+    <ClInclude Include="FlappyTwitch\PipeManager.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

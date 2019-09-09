@@ -10,13 +10,12 @@
 class InputManager
 {
 public:
-   InputManager(Flapper* _flapper, Pipe* _pipe);
+   InputManager(Flapper* _flapper);
    ~InputManager();
 
    void Update();
 
 private:
    Flapper* flapper;
-   Pipe* pipe;
 };
 #endif

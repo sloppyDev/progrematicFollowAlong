@@ -1,9 +1,8 @@
 #include "InputManager.h"
 
-InputManager::InputManager(Flapper* _flapper, Pipe* _pipe)
+InputManager::InputManager(Flapper* _flapper)
 {
    flapper = _flapper;
-   pipe = _pipe;
 }
 
 InputManager::~InputManager()
@@ -17,6 +16,4 @@ void InputManager::Update()
    {
       flapper->Flap();
    }
-
-   pipe->MoveTo(Vector3(Mouse::GetMouseX(), Mouse::GetMouseY(), 0));
 }

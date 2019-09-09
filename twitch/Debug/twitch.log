@@ -1,2 +1,5 @@
-﻿  twitch.cpp
+﻿  PipeManager.cpp
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\FlappyTwitch\PipeManager.cpp(79,17): warning C4244:  'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\FlappyTwitch\PipeManager.cpp(80,42): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Joe\Documents\progrematicFollowAlong\twitch\FlappyTwitch\PipeManager.cpp(81,17): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
   twitch.vcxproj -> C:\Users\Joe\Documents\progrematicFollowAlong\twitch\Debug\twitch.exe
