@@ -56,10 +56,10 @@ void Sprite::Render()
    glColor4f(1, 1, 1, 1);
    glBegin(GL_QUADS);
    {
-      glTexCoord2f(0, 0);   glVertex2i(0, 0);
-      glTexCoord2f(1, 0);   glVertex2i(texture.GetWidth(), 0);
-      glTexCoord2f(1, 1);   glVertex2i(texture.GetWidth(), texture.GetHeight());
-      glTexCoord2f(0, 1);   glVertex2i(0, texture.GetHeight());
+      glTexCoord2f(0, 0);   glVertex2i(-texture.GetWidth()/2, -texture.GetHeight()/2);
+      glTexCoord2f(1, 0);   glVertex2i(texture.GetWidth()/2, -texture.GetHeight()/2);
+      glTexCoord2f(1, 1);   glVertex2i(texture.GetWidth()/2, texture.GetHeight()/2);
+      glTexCoord2f(0, 1);   glVertex2i(-texture.GetWidth()/2, texture.GetHeight()/2);
    }
    glEnd();
 
@@ -108,7 +108,7 @@ void Sprite::SpeedBy(float s)
 
 void Sprite::RotateTo(float _rot)
 {
-   rot = rot;
+   rot = _rot;
 }
 
 void Sprite::RotateBy(float _rot)
@@ -124,6 +124,16 @@ void Sprite::SetScale(float x)
 void Sprite::SetScale(Vector3 vec)
 {
    scale = vec;
+}
+
+void Sprite::FlipHorizontal()
+{
+   scale.x = -scale.x;
+}
+
+void Sprite::FlipVertical()
+{
+   scale.y = -scale.y;
 }
 
 Vector3* Sprite::GetPos()

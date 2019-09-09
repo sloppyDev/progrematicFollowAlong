@@ -42,6 +42,18 @@
     <ClCompile Include="FlappyTwitch\Flapper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FlappyTwitch\InputManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Math\Rectangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Math\Math.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlappyTwitch\Pipe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Engine.h">
@@ -68,6 +80,18 @@
     <ClInclude Include="FlappyTwitch\Flapper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FlappyTwitch\InputManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Math\Rectangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Math\Math.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlappyTwitch\Pipe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -77,6 +101,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Art\Biplane.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\Art\Pipe.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

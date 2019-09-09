@@ -4,6 +4,8 @@
 #include "Engine/IO/Keyboard.h"
 
 #include "FlappyTwitch/Flapper.h"
+#include "FlappyTwitch/InputManager.h"
+#include "FlappyTwitch/Pipe.h"
 
 #include <iostream>
 using namespace std;
@@ -16,55 +18,29 @@ int main()
    char windowName[] = "Twitch!";
    engine.Initialize(windowName);
 
-   Sprite testSprite = Sprite("Assets/Art/Biplane.png", Vector3(-100, -100, 0));
-   testSprite.SetScale(0.25);
+   Sprite testSprite = Sprite("Assets/Art/Biplane.png", Vector3((float)(Engine::SCREEN_WIDTH / 2), (float)(Engine::SCREEN_HEIGHT / 2), 0));
+   testSprite.SetScale(0.15f);
+
 
    Flapper player(testSprite);
+
+   Pipe::Initialize();
+   Pipe pipe(Vector3(0, 0, 0));
+
+   InputManager im(&player, &pipe);
 
    while (true)
    {
       engine.Update();
       player.Update();
-
-      //testSprite.SetPos((float)Mouse::GetMouseX(), (float)Mouse::GetMouseY());
-
-      if (Mouse::ButtonDown(GLFW_MOUSE_BUTTON_LEFT))
-      {
-         player.GetSprite().RotateBy(10);
-      }
-
-      if (Mouse::ButtonUp(GLFW_MOUSE_BUTTON_RIGHT))
-      {
-         player.GetSprite().RotateBy(-10);
-      }
-
-      if (Mouse::Button(GLFW_MOUSE_BUTTON_MIDDLE))
-      {
-         player.GetSprite().RotateBy(10);
-      }
-
-      if (Keyboard::Key(GLFW_KEY_W))
-      {
-         player.GetRb().AddForce(Vector3(0, 2, 0));
-      }
-
-      if (Keyboard::Key(GLFW_KEY_S))
-      {
-         player.GetRb().AddForce(Vector3(0, -2, 0));
-      }
-
-      if (Keyboard::Key(GLFW_KEY_A))
-      {
-         player.GetRb().AddForce(Vector3(-200, 0, 0));
-      }
-
-      if (Keyboard::Key(GLFW_KEY_D))
-      {
-         player.GetRb().AddForce(Vector3(200, 0, 0));
-      }
+      pipe.Update();
+      bool isColliding = (RigidBody::IsColliding(player.GetRb(), pipe.GetTopRb()) || RigidBody::IsColliding(player.GetRb(), pipe.GetBotRb()));
+      //cout << (isColliding ? "COLLIDING!!!!!!" : ".....") << endl; 
+      im.Update();
 
       engine.BeginRender();
       player.Render();
+      pipe.Render();
       engine.EndRender();
    }
 

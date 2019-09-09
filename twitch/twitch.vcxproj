@@ -128,9 +128,13 @@
     <ClCompile Include="Engine\Graphics\Texture.cpp" />
     <ClCompile Include="Engine\IO\Keyboard.cpp" />
     <ClCompile Include="Engine\IO\Mouse.cpp" />
+    <ClCompile Include="Engine\Math\Math.cpp" />
+    <ClCompile Include="Engine\Math\Rectangle.cpp" />
     <ClCompile Include="Engine\Math\Vector3.cpp" />
     <ClCompile Include="Engine\Physics\RigidBody.cpp" />
     <ClCompile Include="FlappyTwitch\Flapper.cpp" />
+    <ClCompile Include="FlappyTwitch\InputManager.cpp" />
+    <ClCompile Include="FlappyTwitch\Pipe.cpp" />
     <ClCompile Include="twitch.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -139,9 +143,13 @@
     <ClInclude Include="Engine\Graphics\Texture.h" />
     <ClInclude Include="Engine\IO\Keyboard.h" />
     <ClInclude Include="Engine\IO\Mouse.h" />
+    <ClInclude Include="Engine\Math\Math.h" />
+    <ClInclude Include="Engine\Math\Rectangle.h" />
     <ClInclude Include="Engine\Math\Vector3.h" />
     <ClInclude Include="Engine\Physics\RigidBody.h" />
     <ClInclude Include="FlappyTwitch\Flapper.h" />
+    <ClInclude Include="FlappyTwitch\InputManager.h" />
+    <ClInclude Include="FlappyTwitch\Pipe.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -151,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Art\Biplane.png" />
+    <Image Include="Assets\Art\Pipe.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
